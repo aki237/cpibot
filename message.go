@@ -13,9 +13,9 @@ type Content struct {
 
 // struct for containing Message xml of the reply
 type Message struct {
-	Channel string  `xml:CHANNEL,attr` // Channel : private or bradcast
-	From    string  `xml:"FROM"`       // Nickname of the sender
-	Content Content `xml:"CONTENT"`    // Content struct
+	Channel string  `xml:"CHANNEL,attr"` // Channel : private or bradcast
+	From    string  `xml:"FROM"`         // Nickname of the sender
+	Content Content `xml:"CONTENT"`      // Content struct
 }
 
 // GetMessageStruct is used convert the xml sent by the server to native golang structs.

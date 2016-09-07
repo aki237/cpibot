@@ -62,7 +62,7 @@ func (b *Bot) processAndSend(msg Message) {
 	returnstring, shouldreturn := b.BotFunc(msg)
 	if shouldreturn {
 		if msg.Channel == "private" {
-			b.c.Write([]byte("MSG WITH" + b.cookie + " TO " + msg.From + " " + returnstring + "\n"))
+			b.c.Write([]byte("MSG WITH " + b.cookie + " TO " + msg.From + " " + returnstring + "\n"))
 		} else {
 			b.c.Write([]byte("BROADCAST WITH " + b.cookie + " " + returnstring + "\n"))
 		}
